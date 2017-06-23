@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Order Form</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+        <a href="index.html">Order Form</a>
+        <a href="orders.html">Order</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form id='HTMLform'>
+        <fieldset>
+          <legend>Order Form</legend>
+  <!-- // 5 Label Inputes -->
+          <label for="custName">Customer Name</label>
+          <input name="custName"></input>
+
+          <label for="custAddPhone">Phone #</label>
+          <input name="custAddPhone"></input>
+
+          <label for="prodName">Product</label>
+          <!-- <input name="prodName"></input> -->
+          <select id="prodName" onchange="product">
+            <option>bag</option>
+            <option>banana</option>
+            <option>bathroom</option>
+            <option>boots</option>
+            <option>breakfast</option>
+
+            <option>bubblegum</option>
+            <option>chair</option>
+            <option>cthulhu</option>
+            <option>dog-duck</option>
+            <option>dragon</option>
+
+            <option>pen</option>
+            <option>petsweet</option>
+            <option>scissors</option>
+            <option>shark</option>
+            <option>sweep</option>
+
+            <option>tauntaun</option>
+            <option>unicorn</option>
+            <option>usb</option>
+            <option>water-can</option>
+            <option>win-glass</option>
+          </select>
+
+          <label for="prodQuantity">Quantity</label>
+          <input name="prodQuantity"></input>
+
+          <label for="creditCard">Credit Card</label>
+          <input name="creditCard"></input>
+
+          <button type="submit">Submit Order</button>
+        </fieldset>
+      </form>
+    </main>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+</html>
