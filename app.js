@@ -9,7 +9,12 @@ var orderTable = document.getElementById('ordersTable');
 // var prodQuantity = 0;
 // var creditCard = 0;
 NewOrder.header = ['custName', 'custAddPhone', 'prodName', 'prodQuantity', 'creditCard'];
-NewOrder.all = [];
+NewOrder.all = localStorage.all;
+if (NewOrder.all === undefined || NewOrder.all === null) {
+  NewOrder.all = [];
+} else {
+  pullStorage();
+}
 
 function NewOrder (custName, custAddPhone, prodName, prodQuantity, creditCard) {
   this.custName = custName;
@@ -56,5 +61,4 @@ function pullStorage() {
   NewOrder.all = JSON.parse(storeAll);
 }
 
-pullStorage();
 submitform.addEventListener('submit', handleSubmit);
